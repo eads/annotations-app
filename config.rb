@@ -2,6 +2,7 @@
 # Extensions
 ###
 
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload, :ignore => %w(amp fbia)
@@ -17,8 +18,8 @@ activate :directory_indexes
 # sheet: https://docs.google.com/spreadsheets/d/1bij4r5mHcQV_g6bIxlAbM5-ElmGjGu_-5NBp2SIfN3c/edit#gid=0
 # doc: https://docs.google.com/document/d/1p_Zi-utnPU82xT61evrw0Tvq32F1k6YpKOlmC4qvIo4/edit
 activate :google_drive,
-         :load_docs_html => '1p_Zi-utnPU82xT61evrw0Tvq32F1k6YpKOlmC4qvIo4',
-         :load_sheets => '1bij4r5mHcQV_g6bIxlAbM5-ElmGjGu_-5NBp2SIfN3c'
+         :load_docs_html => '1kWFMixw7gVrzi3qsSQz9BnS-pEUSq3QL-O_-f_SNtJ0',
+         :load_sheets => '1aZsvvc--IAnBvHOSHtKGSvA8c6REi1md815aiqnWVHA'
 
 # :load_docs_html => '1jUXP6ApqF5PSxfYOAr1Y2hoHaGOqNx504ILQSYM4c3c',
 # Load multiple google spreadsheets
@@ -143,4 +144,7 @@ configure :build do
   # Package and compress all our javascripts and styles
   activate :minify_javascript
   activate :minify_css
+
+  # build to docs
+  set :build_dir, 'docs'
 end
